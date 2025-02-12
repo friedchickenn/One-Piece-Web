@@ -5,237 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Piece</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: rgba(255, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .navbar {
-            margin: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        nav .icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
-        }
-
-        nav .icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        nav .nav-links {
-            display: flex;
-            align-items: center;
-            border: 1px solid #000;
-            border-radius: 10px;
-            overflow: hidden;
-            background-color: white;
-            box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
-        }
-
-        nav a {
-            color: #000;
-            text-decoration: none;
-            padding: 8px 16px;
-            font-size: 1em;
-            border-left: 1px solid #000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav a:first-child {
-            border-left: none;
-        }
-
-        nav a:hover {
-            background-color: rgba(255, 0, 0, 0.7);
-            color: #000;
-        }
-
-        .header {
-            margin: 20px;
-            padding: 20px;
-            height: auto;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .header h1 {
-            margin: 20px;
-            text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.3);
-        }
-
-        .header p {
-            margin: 20px;
-        }
-
-        .banner {
-            margin: 20px;
-        }
-
-        .banner img {
-            border-radius: 10px;
-            width: 100%;
-            display: flex;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .profile {
-            margin: 20px;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .profile h2 {
-            margin: 10px;
-        }
-
-        .article {
-            margin: 20px;
-            display: flex;
-            padding: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .article h2 {
-            margin: 10px;
-        }
-
-        .article-content {
-            display: flex;
-            overflow-x: auto;
-            flex-wrap: nowrap;
-
-        }
-
-        .article-item {
-            margin: 10px;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: rgba(255, 0, 0, 0.7);
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-            width: calc(25% - 40px);
-            box-sizing: border-box;
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex: 0 0 auto;
-            text-align: center;
-        }
-
-        .article-item img {
-            height: 200px;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-            width: auto;
-            margin-bottom: 10px;
-        }
-
-        .article-item h3 {
-            margin: 7px;
-            text-decoration: solid;
-        }
-
-        .article-item p {
-            margin: 0;
-        }
-
-        .article-item button {
-            margin: 10px;
-            padding: 8px;
-            overflow: hidden;
-            margin-top: 10px auto;
-            border: 1px solid #000;
-            border-radius: 8px;
-            box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
-
-        }
-
-        .article-item button a {
-            text-decoration: none;
-            display: block;
-            color: #000;
-        }
-
-        .article-item button:hover {
-            background-color: rgba(255, 0, 0, 0.2);
-            color: #000;
-        }
-
-        .youtube {
-            margin: 20px;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .content-youtube {
-            margin: 10px;
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .youtube h2,
-        p {
-            margin: 10px;
-        }
-
-        .content-youtube iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .footer {
-            margin: 20px;
-            text-align: center;
-            padding: 10px 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .footer-content a {
-            text-decoration: none;
-            color: #000;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -243,7 +13,7 @@
     <nav>
         <div class="navbar">
             <div class="icon">
-                <img src="foto.jpg" alt="Profile Image">
+                <img src="image/foto.jpg" alt="Profile Image">
             </div>
             <div class="nav-links">
                 <a href="#home">Home</a>
@@ -260,7 +30,7 @@
         <P>Selamat datang di petualangan baru! Aku Monkey D. Luffy, dan aku akan menjadi Raja Bajak Laut! Bergabunglah
             dengan kami di kapal ini dan mari kita temukan One Piece bersama-sama! Yosha! Petualangan dimulai!</P>
         <div class="banner">
-            <img src="foto2.jpg">
+            <img src="image/foto2.jpg">
         </div>
     </div>
 
@@ -285,7 +55,7 @@
         </div>
         <div class="article-content">
             <div class="article-item">
-                <img src="luffy.jpg" alt="">
+                <img src="image/luffy.jpg" alt="">
                 <h3>Monkey D.Luffy</h3>
                 <p><b>Alias</b>: Topi Jerami, Manusia karet.</p>
                 <p><b>Jabatan</b>: Kapten.</p>
@@ -293,7 +63,7 @@
                 <button><a href="kirim pesan.html">Kirim Pesan</a></button>
             </div>
             <div class="article-item">
-                <img src="zoro.jpg" alt="">
+                <img src="image/zoro.jpg" alt="">
                 <h3>Roronoa Zoro</h3>
                 <p><b>Alias</b>: Pemburu Bajak Laut, Pendekar Tiga Pedang.</p>
                 <p><b>Jabatan</b>: Petarung, Pendekar Pedang.</p>
@@ -301,7 +71,7 @@
                 <button><a href="kirim pesan.html">Kirim Pesan</a></button>
             </div>
             <div class="article-item">
-                <img src="nami.jpg" alt="">
+                <img src="image/nami.jpg" alt="">
                 <h3>Nami</h3>
                 <p><b>Alias</b>: Kucing Pencuri.</p>
                 <p><b>Jabatan</b>: Navigator.</p>
@@ -309,7 +79,7 @@
                 <button><a href="kirim pesan.html">Kirim Pesan</a></button>
             </div>
             <div class="article-item">
-                <img src="sanji.jpg" alt="">
+                <img src="image/sanji.jpg" alt="">
                 <h3>Vinsmoke Sanji</h3>
                 <p><b>Alias</b>: Kaki Hitam, Alis Melingkar.</p>
                 <p><b>Jabatan</b>: Koki, Okama.</p>
@@ -317,7 +87,7 @@
                 <button><a href="kirim pesan.html">Kirim Pesan</a></button>
             </div>
             <div class="article-item">
-                <img src="usopp.jpg" alt="">
+                <img src="image/usopp.jpg" alt="">
                 <h3>Usopp</h3>
                 <p><b>Alias</b>: Hidung Panjang, God Usopp, Soge King.</p>
                 <p><b>Jabatan</b>: Penembak Jitu.</p>
@@ -325,7 +95,7 @@
                 <button><a href="kirim pesan.html">Kirim Pesan</a></button>
             </div>
             <div class="article-item">
-                <img src="chopper.jpg" alt="">
+                <img src="image/chopper.jpg" alt="">
                 <h3>Tony Tony Chopper</h3>
                 <p><b>Alias</b>: Pecinta Permen Kapas.</p>
                 <p><b>Jabatan</b>: Dokter.</p>
@@ -333,7 +103,7 @@
                 <button><a href="kirim pesan.html">Kirim Pesan</a></button>
             </div>
             <div class="article-item">
-                <img src="niko.jpg" alt="">
+                <img src="image/niko.jpg" alt="">
                 <h3>Nico Robin</h3>
                 <p><b>Alias</b>: Anak Iblis.</p>
                 <p><b>Jabatan</b>: Arkeolog.</p>
@@ -341,7 +111,7 @@
                 <button><a href="kirim pesan.html">Kirim Pesan</a></button>
             </div>
             <div class="article-item">
-                <img src="franky.jpg" alt="">
+                <img src="image/franky.jpg" alt="">
                 <h3>Franky/Cutty Flam</h3>
                 <p><b>Alias</b>: Cyborg.</p>
                 <p><b>Jabatan</b>: Tukang Kayu.</p>
@@ -349,7 +119,7 @@
                 <button><a href="kirim pesan.html">Kirim Pesan</a></button>
             </div>
             <div class="article-item">
-                <img src="brook.jpg" alt="">
+                <img src="image/brook.jpg" alt="">
                 <h3>Brook</h3>
                 <p><b>Alias</b>: Pendekar Bersenandung.</p>
                 <p><b>Jabatan</b>: Musisi.</p>
@@ -357,7 +127,7 @@
                 <button><a href="kirim pesan.html">Kirim Pesan</a></button>
             </div>
             <div class="article-item">
-                <img src="jinbei.jpg" alt="">
+                <img src="image/jinbei.jpg" alt="">
                 <h3>Jinbei</h3>
                 <p><b>Alias</b>: ksatria lautan.</p>
                 <p><b>Jabatan</b>:supir/pengemudi kapal.</p>
